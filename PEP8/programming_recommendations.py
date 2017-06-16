@@ -24,9 +24,15 @@ print('\n')
 iterable2 = "xyz"
 joined2 = "+".join(iterable2)
 print('"+".join("xyz") == "' + joined2 + '"')
+print('\n')
 
 # Comparisons to singletons
-# Todo == and is not None
+i = 0
+if i is not None:
+    print('i is not None')
+
+# if i != None:             Bad
+    # print('i != None')    Bad
 
 c = ()
 print('c = () is',

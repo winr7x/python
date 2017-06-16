@@ -24,3 +24,16 @@ print('\n')
 iterable2 = "xyz"
 joined2 = "+".join(iterable2)
 print('"+".join("xyz") == "' + joined2 + '"')
+
+# Comparisons to singletons
+# Todo == and is not None
+
+c = ()
+print('c = () is',
+      'true' if c else 'false',
+      'in boolean context')
+
+# my_var true in context of "is my_var initialized"
+print('c = () is',
+      'true' if c is not None else 'false',
+      'in context "is initialized"')

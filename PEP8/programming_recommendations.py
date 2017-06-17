@@ -49,6 +49,7 @@ def item_2():
 
 
 def item_3():
+	# is not Vs. not .. is
 	class Cat:
 		pass
 

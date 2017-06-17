@@ -4,26 +4,31 @@ def item_1():
 
 	# Implementations of Python: PyPy, Jython, IronPython, Cython, Psyco
 
-	# In-place string concatenation
-	a = "aaa"
-	b = "bbb"
-	print_a_and_b(a, b)
-	a += b
-	print_a_and_b(a, b)
-	a = a + b
-	print_a_and_b(a, b)
-	print('\n')
+	def inplace_concatenation():
+		# In-place string concatenation
+		a = "aaa"
+		b = "bbb"
+		print_a_and_b(a, b)
+		a += b
+		print_a_and_b(a, b)
+		a = a + b
+		print_a_and_b(a, b)
+		print('\n')
 
-	# ''.join() concatenation
-	iterable1 = ["display", "battery", "keyboard"]
-	joined1 = " <--> ".join(iterable1)
-	print('" <--> ".join(["display", "battery", "keyboard"]) == "' + joined1 + '"')
-	print('\n')
+	def join_concatenation():
+		# ''.join() concatenation
+		iterable1 = ["display", "battery", "keyboard"]
+		joined1 = " <--> ".join(iterable1)
+		print('" <--> ".join(["display", "battery", "keyboard"]) == "' + joined1 + '"')
+		print('\n')
 
-	iterable2 = "xyz"
-	joined2 = "+".join(iterable2)
-	print('"+".join("xyz") == "' + joined2 + '"')
-	print('\n')
+		iterable2 = "xyz"
+		joined2 = "+".join(iterable2)
+		print('"+".join("xyz") == "' + joined2 + '"')
+		print('\n')
+
+	inplace_concatenation()
+	join_concatenation()
 
 
 def item_2():

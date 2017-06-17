@@ -17,14 +17,14 @@ def item_1():
 
 	def join_concatenation():
 		# ''.join() concatenation
-		iterable1 = ["display", "battery", "keyboard"]
-		joined1 = " <--> ".join(iterable1)
-		print('" <--> ".join(["display", "battery", "keyboard"]) == "' + joined1 + '"')
+		a = ["display", "battery", "keyboard"]
+		b = " <--> ".join(a)
+		print('" <--> ".join(["display", "battery", "keyboard"]) == "' + b + '"')
 		print('\n')
 
-		iterable2 = "xyz"
-		joined2 = "+".join(iterable2)
-		print('"+".join("xyz") == "' + joined2 + '"')
+		c = "xyz"
+		d = "+".join(c)
+		print('"+".join("xyz") == "' + d + '"')
 		print('\n')
 
 	inplace_concatenation()

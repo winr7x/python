@@ -45,6 +45,25 @@ def item_2():
 	      'true' if b is not None else 'false',
 	      'in context "is initialized"')
 
+	print('\n')
+
+
+def item_3():
+	class Cat:
+		pass
+
+	cat1 = Cat()
+	cat2 = Cat()
+
+	if cat1 is not cat2:
+		print('cat1 is not cat2')
+
+	#if not cat1 is cat2:				Bad
+		# print('cat1 not is cat2')		Bad
+
+	print('\n')
+
 
 item_1()
 item_2()
+item_3()

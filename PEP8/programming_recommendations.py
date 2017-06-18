@@ -64,7 +64,7 @@ def item_3():
     if cat1 is not cat2:
         print('cat1 is not cat2')
 
-    #if not cat1 is cat2:               Bad
+    # if not cat1 is cat2:              Bad
         # print('cat1 not is cat2')     Bad
 
     print('\n')

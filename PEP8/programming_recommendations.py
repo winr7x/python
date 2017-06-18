@@ -114,7 +114,35 @@ def item_4():
     print('\n')
 
 
+def item_5():
+    # def vs. lambda
+    def f_def(x):
+        return 2*x
+
+    # f_lam = lambda x: 2*x                                 # Bad lambda use
+
+    print('f_def(3) ==', f_def(3))
+
+    class Product:
+        def __init__(self, name, price):
+            self.name = name
+            self.price = price
+
+        def __repr__(self):
+            return '[{}-{}]'.format(self.name, self.price)
+
+    list = [Product('car', 92),
+            Product('kettle', 1),
+            Product('trampoline', 40)]
+
+    print("unsorted list", list)
+    print("sorted list",
+          sorted(list, key=lambda product: product.price))  # Good lambda use
+    print('\n')
+
+
 item_1()
 item_2()
 item_3()
 item_4()
+item_5()

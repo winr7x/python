@@ -24,14 +24,14 @@ def item_1():
         a = ['display', 'battery', 'keyboard']
         b = ' <--> '.join(a)
         print('{} == "{}"'.format(
-            "\" <--> \".join(['display', 'battery', 'keyboard'])",
+            "'' <--> '.join(['display', 'battery', 'keyboard'])",
             b
         ))
         print('\n')
 
         c = 'xyz'
         d = '+'.join(c)
-        print('"+".join("xyz") == "' + d + '"')
+        print('{} == "{}"'.format("'+'.join('xyz')", d))
         print('\n')
 
     inplace_concatenation()

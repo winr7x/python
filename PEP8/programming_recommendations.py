@@ -4,14 +4,14 @@ from functools import total_ordering
 
 def item_1():
     def print_a_and_b(a, b):
-        print("a ==", a, "\tb ==", b)
+        print('a ==', a, '\tb ==', b)
 
     # Implementations of Python: PyPy, Jython, IronPython, Cython, Psyco
 
     def inplace_concatenation():
         # In-place string concatenation
-        a = "aaa"
-        b = "bbb"
+        a = 'aaa'
+        b = 'bbb'
         print_a_and_b(a, b)
         a += b
         print_a_and_b(a, b)
@@ -22,15 +22,15 @@ def item_1():
     def join_concatenation():
         # ''.join() concatenation
         a = ['display', 'battery', 'keyboard']
-        b = " <--> ".join(a)
+        b = ' <--> '.join(a)
         print('{} == "{}"'.format(
             "\" <--> \".join(['display', 'battery', 'keyboard'])",
             b
         ))
         print('\n')
 
-        c = "xyz"
-        d = "+".join(c)
+        c = 'xyz'
+        d = '+'.join(c)
         print('"+".join("xyz") == "' + d + '"')
         print('\n')
 
@@ -142,8 +142,8 @@ def item_5():
         Product('trampoline', 40),
     ]
 
-    print("unsorted list", list)
-    print("sorted list",
+    print('unsorted list', list)
+    print('sorted list',
           sorted(list, key=lambda product: product.price))  # Good lambda use
     print('\n')
 

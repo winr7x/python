@@ -104,9 +104,11 @@ def item_4():
             # try comment this method and @total_ordering and check the result
             return self.weight() > other.weight()
 
-    list = [FiveCentricPoint('a', 1, 1),
-            FiveCentricPoint('b', 6, 5),
-            FiveCentricPoint('c', 5, 3)]
+    list = [
+        FiveCentricPoint('a', 1, 1),
+        FiveCentricPoint('b', 6, 5),
+        FiveCentricPoint('c', 5, 3),
+    ]
 
     print(sorted(list))
     print(list[0].__ne__(list[1]))
@@ -134,9 +136,11 @@ def item_5():
         def __repr__(self):
             return '[{}-{}]'.format(self.name, self.price)
 
-    list = [Product('car', 92),
-            Product('kettle', 1),
-            Product('trampoline', 40)]
+    list = [
+        Product('car', 92),
+        Product('kettle', 1),
+        Product('trampoline', 40),
+    ]
 
     print("unsorted list", list)
     print("sorted list",

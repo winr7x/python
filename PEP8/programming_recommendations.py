@@ -1,3 +1,7 @@
+import math
+from functools import total_ordering
+
+
 def item_1():
     def print_a_and_b(a, b):
         print("a ==", a, "\tb ==", b)
@@ -70,6 +74,46 @@ def item_3():
     print('\n')
 
 
+def item_4():
+    @total_ordering         # try comment this line and check the result
+    class FiveCentricPoint:
+        def __init__(self, name, x, y):
+            self.x = x
+            self.y = y
+            self.name = name
+
+        def __repr__(self):
+            return '{}({},{})'.format(self.name, self.x, self.y)
+
+        def weight(self):
+            x_part = (5 - self.x)**2
+            y_part = (5 - self.y)**2
+            return math.sqrt(x_part + y_part)
+
+        def __eq__(self, other):
+            # try comment this method and check the result
+            # try comment this method and @total_ordering and check the result
+            return self.weight == other.weight()
+
+        def __gt__(self, other):
+            # try comment this method and check the result
+            # try comment this method and @total_ordering and check the result
+            return self.weight() > other.weight()
+
+    list = [FiveCentricPoint('a', 1, 1),
+            FiveCentricPoint('b', 6, 5),
+            FiveCentricPoint('c', 5, 3)]
+
+    print(sorted(list))
+    print(list[0].__ne__(list[1]))
+    print(list[0].__gt__(list[1]))
+    print(list[0].__lt__(list[1]))
+    print(list[0].__ge__(list[1]))
+    print(list[0].__le__(list[1]))
+    print('\n')
+
+
 item_1()
 item_2()
 item_3()
+item_4()

@@ -148,8 +148,28 @@ def item_5():
     print('\n')
 
 
+def item_6():
+    # Exception vs. BaseException
+    class AaaError(Exception):         # Error exception
+        pass
+
+    class Bbb(Exception):              # Non-error exception
+        pass
+
+    # class B(BaseException):          # Bad
+        # pass
+
+    # Locations where the exceptions are raised:            Bad
+    # OSError: [Errno 2] No such file or directory: 'fff'
+    # IOError: [Errno 2] No such file or directory: 'fff'
+
+    # Answer to the question "What went wrong?              Good
+    # FileNotFoundError: ...
+
+
 item_1()
 item_2()
 item_3()
 item_4()
 item_5()
+item_6()

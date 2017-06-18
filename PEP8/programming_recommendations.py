@@ -75,6 +75,7 @@ def item_3():
 
 
 def item_4():
+    # ordering operation
     @total_ordering         # try comment this line and check the result
     class FiveCentricPoint:
         def __init__(self, name, x, y):

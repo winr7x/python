@@ -21,9 +21,12 @@ def item_1():
 
     def join_concatenation():
         # ''.join() concatenation
-        a = ["display", "battery", "keyboard"]
+        a = ['display', 'battery', 'keyboard']
         b = " <--> ".join(a)
-        print('" <--> ".join(["display", "battery", "keyboard"]) == "' + b + '"')
+        print('{} == "{}"'.format(
+            "\" <--> \".join(['display', 'battery', 'keyboard'])",
+            b
+        ))
         print('\n')
 
         c = "xyz"

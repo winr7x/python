@@ -244,6 +244,20 @@ def item_9():
         pass
 
 
+def item_10():
+    # Explicit exception name binding vs. comma-based
+
+    try:
+        0/0
+    except (TypeError, ZeroDivisionError) as e:     # Good
+        pass
+
+    # try:
+    #     0/0
+    # except (TypeError, ZeroDivisionError), e:     # Bad
+    #     pass
+
+
 item_1()
 item_2()
 item_3()
@@ -253,3 +267,4 @@ item_6()
 item_7()
 item_8()
 item_9()
+item_10()

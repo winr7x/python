@@ -205,6 +205,14 @@ def item_7():
     print('\n')
 
 
+def item_8():
+    # Python 2 raising exception form
+
+    # raise ValueError('message')   # Preferred form
+    # raise ValueError, 'message'   # bad older form
+    pass
+
+
 item_1()
 item_2()
 item_3()
@@ -212,3 +220,4 @@ item_4()
 item_5()
 item_6()
 item_7()
+item_8()

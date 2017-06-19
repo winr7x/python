@@ -167,9 +167,48 @@ def item_6():
     # FileNotFoundError: ...
 
 
+def item_7():
+    # Exception chaining
+
+    def do_exception():
+        0 / 0
+
+    def python3():
+        try:
+            try:
+                do_exception()
+            except ZeroDivisionError as e:
+                raise ValueError('Error at the same abstraction level as the '
+                                 'function item_7') from e
+        except ValueError:
+            pass
+
+    def python2():
+        class SomeError(Exception):
+            def __init__(self, message, cause):
+                # Ensure that relevant details are transferred to
+                # the new exception
+                super().__init__(message + ', caused by ' + str(cause))
+                self.cause = cause
+
+        try:
+            try:
+                do_exception()
+            except ZeroDivisionError as e:
+                raise SomeError('Error at the same abstraction level as the '
+                                'function item_7', e)
+        except SomeError:
+            pass
+
+    python3()
+    python2()
+    print('\n')
+
+
 item_1()
 item_2()
 item_3()
 item_4()
 item_5()
 item_6()
+item_7()

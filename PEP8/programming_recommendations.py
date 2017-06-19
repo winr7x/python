@@ -213,6 +213,37 @@ def item_8():
     pass
 
 
+def item_9():
+    # Specific exception vs. bare except:
+
+    # try:
+    #     pass
+    # except:     # Bare except: It is equivalent to except BaseExceptio
+    #     pass
+
+    # rule of a thumb:
+
+    # 1)
+    # try:
+    #     some work...
+    # except:
+    #     printing out the traceback...
+    #     or logging the traceback...
+
+    # 2)
+    # try:
+    #     some work...
+    # except:
+    #     cleanup work...
+    #     propagate upwards with raise...
+    #     (but try...finally can be a better way)
+
+    try:
+        0/0
+    except Exception as e:  # Good catching of all exceptions
+        pass
+
+
 item_1()
 item_2()
 item_3()
@@ -221,3 +252,4 @@ item_5()
 item_6()
 item_7()
 item_8()
+item_9()

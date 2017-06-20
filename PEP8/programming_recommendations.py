@@ -202,7 +202,6 @@ def item_7():
 
     python3()
     python2()
-    print('\n')
 
 
 def item_8():
@@ -258,6 +257,22 @@ def item_10():
     #     pass
 
 
+def item_11():
+    # Explicit exception hierarchy vs. errno
+
+    f = 'nonexistentfile'
+
+    try:
+        open(f)
+    except FileNotFoundError as e:                              # Good
+        print(str(e))
+
+    try:
+        open(f)
+    except IOError as e:
+        print('Open file "{}". errno = {}'.format(f, e.errno))  # Bad
+
+
 item_1()
 item_2()
 item_3()
@@ -268,3 +283,4 @@ item_7()
 item_8()
 item_9()
 item_10()
+item_11()

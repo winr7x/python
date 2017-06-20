@@ -273,6 +273,25 @@ def item_11():
         print('Open file "{}". errno = {}'.format(f, e.errno))  # Bad
 
 
+def item_12():
+    # Minimum code in try:
+
+    # try:
+    #     value = collection[key]           # Minimum code here
+    # except KeyError:
+    #     return key_not_found(key)
+    # else:
+    #     return handle_value(value)
+
+    # try:
+    #     # Too broad!
+    #     return handle_value(collection[key])
+    # except KeyError:
+    #     # Will also catch KeyError raised by handle_value()
+    #     return key_not_found(key)
+    pass
+
+
 item_1()
 item_2()
 item_3()
@@ -284,3 +303,4 @@ item_8()
 item_9()
 item_10()
 item_11()
+item_12()

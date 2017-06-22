@@ -292,6 +292,26 @@ def item_12():
     pass
 
 
+def item_13():
+    # Ensure local resource is cleaned up
+
+    # with open('somefile.txt', 'r') as f:
+        # print(f.read())                   # Will be closed anyway
+
+    file = None
+    try:
+        file = open('somefile2.txt', 'r')
+        print(file.read())
+    except Exception as e:
+        print("Exception occured:", str(e))
+    finally:                                # Will be closed anyway
+        if file is None:
+            print('File was not opened')
+        else:
+            print('Closing file...')
+            file.close()
+
+
 item_1()
 item_2()
 item_3()
@@ -304,3 +324,4 @@ item_9()
 item_10()
 item_11()
 item_12()
+item_13()

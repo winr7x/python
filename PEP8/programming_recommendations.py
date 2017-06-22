@@ -312,6 +312,31 @@ def item_13():
             file.close()
 
 
+def item_14():
+    # Context expression explicitly indicates what Context manager do
+
+    # with conn.begin_transaction():          # Good
+    #     do_stuff_in_transaction(conn)
+
+    # 'conn.begin_transaction()' explicitly indicates that we want to wrap
+    # transaction stuff in some context
+
+    # ====================================================================
+
+    # with conn:                              # Bad
+    #     do_stuff_in_transaction(conn)
+
+    # 'conn' doesn't indicate that we want wrap transaction stuff in some
+    # context.
+
+    # Establishing connection is one thing,
+    # but the transaction is another.
+
+    # with establish_connection() as conn     # Good
+    #     do_stuff_in_connection
+    pass
+
+
 item_1()
 item_2()
 item_3()
@@ -325,3 +350,4 @@ item_10()
 item_11()
 item_12()
 item_13()
+item_14()

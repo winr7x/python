@@ -337,6 +337,31 @@ def item_14():
     pass
 
 
+def item_15():
+    # Be constistent in return statements
+
+    def foo(x):                     # Good
+        if x >= 0:
+            return math.sqrt(x)
+        else:
+            return None
+
+    def bar(x):                     # Good
+        if x < 0:
+            return None
+        return math.sqrt(x)
+
+    def baz(x):
+        if x >= 0:
+            return math.sqrt(x)
+        # Bad: must be 'return None' here
+
+    def qux(x):
+        if x < 0:
+            return                  # Bad: must be explicit 'return None'
+        return math.sqrt(x)
+
+
 item_1()
 item_2()
 item_3()
@@ -351,3 +376,4 @@ item_11()
 item_12()
 item_13()
 item_14()
+item_15()

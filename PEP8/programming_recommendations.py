@@ -362,6 +362,31 @@ def item_15():
         return math.sqrt(x)
 
 
+def item_16():
+    # String methods instead of thie string module
+
+    # In Python 2:
+
+    # string.lower('AAABBB')            # Bad
+    # string.upper('aaabbb')
+    # string.split('a b c')
+    # string.join(['E', 'W'], '!')
+    # string.replace('abc', 'b', 'Z')
+    # string.find('abc', 'c')
+    # string.count('abca', 'a')
+
+    # In Python 3:
+
+    print('AAABBB'.lower())             # Good
+    print('aaabbb'.upper())
+    print('a b c'.split())
+    print('!'.join(['E', 'W']))
+    print('abc'.replace('b', 'Z'))
+    print('abca'.count('a'))
+
+    # TODO Unicode
+
+
 item_1()
 item_2()
 item_3()
@@ -377,3 +402,4 @@ item_12()
 item_13()
 item_14()
 item_15()
+item_16()

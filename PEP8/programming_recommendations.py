@@ -310,6 +310,7 @@ def item_13():
         else:
             print('Closing file...')
             file.close()
+    print('\n')
 
 
 def item_14():
@@ -384,7 +385,12 @@ def item_16():
     print('abc'.replace('b', 'Z'))
     print('abca'.count('a'))
 
-    # TODO Unicode
+    # Unicode
+    print('Fichier δ non trouvé'.upper())
+    print('FICHIER Δ NON TROUVÉ'.lower())
+    print('FICHIER Δ NON TROUVÉ'.split('Δ'))
+    print('Fichier δ non trouvé'.replace('δ', 'Δ'))
+    print('Δ Fic ƍ hier δ no ƍ n ⲇ tro ƍ uvé Ⲇ'.count('ƍ'))
 
 
 item_1()

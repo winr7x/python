@@ -393,6 +393,23 @@ def item_16():
     print('Δ Fic ƍ hier δ no ƍ n ⲇ tro ƍ uvé Ⲇ'.count('ƍ'))
 
 
+def item_17():
+    # startswith/endswith Vs. slicing
+
+    # Good
+    a = 'How to get the size?'
+    print(a.startswith('How'))
+    print(a.endswith('size?'))
+
+    # Bad
+    b = 'How'
+    print(a[:len(b)] == b)
+    c = 'size?'
+    print(a[-len(c):] == 'size?')
+
+    print('\n')
+
+
 item_1()
 item_2()
 item_3()
@@ -409,3 +426,4 @@ item_13()
 item_14()
 item_15()
 item_16()
+item_17()
